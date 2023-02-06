@@ -43,6 +43,14 @@ public class LoginActivity extends AppCompatActivity {
         binding= ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        //handle click, on go to previous
+        binding.backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
         //init firebase auth
         firebaseAuth= FirebaseAuth.getInstance();
 
@@ -65,6 +73,14 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 validateData();
+            }
+        });
+
+        //handle click, open forgot password activity
+        binding.forgotTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class));
             }
         });
     }
@@ -150,3 +166,6 @@ public class LoginActivity extends AppCompatActivity {
                 });
         }
     }
+/*We didn't implemented the Forgot Password | Password recovery yet
+* You can also implemented that code in anay firebase project/app
+* * Let's starts...*/

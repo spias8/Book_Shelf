@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
+    android:background="@drawable/back_1"
     tools:context=".LoginActivity">
 
     <RelativeLayout
@@ -13,34 +13,50 @@
         android:layout_height="250dp"
         android:background="@drawable/shape_toolbar01">
 
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/ic_back_white" />
+
         <ImageView
             android:id="@+id/iconIv"
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="48dp"
-            android:src="@drawable/book"
-            />
+            android:layout_marginTop="59dp"
+            android:src="@drawable/book" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/iconIv"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-condensed"
             android:text="Please login!"
             android:textColor="@color/white"
-            android:fontFamily="sans-serif-condensed"
-            android:textSize="28sp"/>
+            android:textSize="28sp" />
 
     </RelativeLayout>
-    
+
+    <!--No account, Register-->
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="30dp"
         android:layout_above="@+id/noAccountTv"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="225dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginTop="225dp">
+        android:layout_marginBottom="-224dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -52,7 +68,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:hintEnabled="false">
-                
+
                 <EditText
                     android:id="@+id/emailEt"
                     android:layout_width="match_parent"
@@ -64,9 +80,9 @@
                     android:inputType="textEmailAddress"
                     android:padding="10dp"
                     android:textColor="@color/black"
-                    android:textColorHint="@color/gray"/>
+                    android:textColorHint="@color/gray" />
 
-                
+
             </com.google.android.material.textfield.TextInputLayout>
 
             <!--Password-->
@@ -76,8 +92,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/emailTil"
                 android:layout_marginTop="5dp"
-                app:passwordToggleEnabled="true"
-                app:hintEnabled="false">
+                app:hintEnabled="false"
+                app:passwordToggleEnabled="true">
 
                 <EditText
                     android:id="@+id/passwordEt"
@@ -90,7 +106,7 @@
                     android:inputType="textPassword"
                     android:padding="10dp"
                     android:textColor="@color/black"
-                    android:textColorHint="@color/gray"/>
+                    android:textColorHint="@color/gray" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <!--Forgot password-->
@@ -114,16 +130,14 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/forgotTv"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/shape_button01"
+                android:background="@drawable/shape_button_1"
                 android:text="Login"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white" />
 
 
         </RelativeLayout>
 
     </ScrollView>
-
-    <!--No account, Register-->
 
     <TextView
         android:id="@+id/noAccountTv"

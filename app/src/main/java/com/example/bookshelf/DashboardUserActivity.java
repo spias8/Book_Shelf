@@ -25,6 +25,14 @@ public class DashboardUserActivity extends AppCompatActivity {
         binding= ActivityDashboardUserBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        //handle click, on go to previous
+        binding.backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
         //init firebase
         firebaseAuth= FirebaseAuth.getInstance();
         checkUser();

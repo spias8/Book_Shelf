@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
+    android:background="@drawable/back_1"
     tools:context=".RegisterActivity">
 
     <RelativeLayout
@@ -159,7 +159,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/cPasswordTil"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/shape_button01"
+                android:background="@drawable/shape_button_1"
                 android:text="Register"
                 android:textColor="@color/white"/>
 
